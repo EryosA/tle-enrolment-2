@@ -1,22 +1,18 @@
 <?php
      session_start();
-/*******************************************************
+/*********************************************************************************
 *
-*     CLASS SELECTION AND REGISTRATION SYSTEM
-*       from PHP and MySQL, A Beginner's Guide
-*     by Marty Matthews, published 2014 McGraw-Hill
+*     TECHNOLOGY AND LIVELIHOOD EDUCATION (TLE) Enrolment Portal
 *
-*       ????.php  Check if user has a cookie.
-*
-********************************************************
-*CAUTION, USE AT YOUR OWN RISK, NO WARRANTY OF ANY KIND
-********************************************************/
+**********************************************************************************
+*  CMSC 208 Group 7 : Armechelyn Derecho, Joel Aguirre, Nixon Garais, Joel Tapiru
+**********************************************************************************/
 ?>
 <!DOCTYPE html>
 <html>
    <head>
    		<meta charset="utf-8">
-		<title>Class Registration Template</title>
+		<title>TLE Course Registration Portal</title>
 		<link rel= "stylesheet" type= "text/css" href= "/ClassRegistration/registration.css"/>
 		<script language="JavaScript" type= "text/javascript"></script>
 	</head>
