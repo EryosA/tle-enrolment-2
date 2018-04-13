@@ -14,14 +14,16 @@
    		<meta charset="utf-8">
 		<title>TLE Course Registration Portal</title>
 		<link rel= "stylesheet" type= "text/css" href= "/ClassRegistration/registration.css"/>
-		<script language="JavaScript" type= "text/javascript"></script>
+        <script type="text/javascript" charset="utf-8">
+            
+        </script>  
 	</head>
 
 	<body>
 		<div id="wrapper">
 			<div id="header">
-				<img src="/ClassRegistration/MatTechLogo.gif" alt="Matthews Technology" />
-				<h1 id="title">Class Selection and Registration</h1>
+				<img src="images/DepEd_logo.png" alt="DepEd" style="width:150px; />
+				<h1 id="title">TLE Course Selection and Enrolment</h1>
 
 			</div> <!-- id="header" -->
 			<div id="hnav">
