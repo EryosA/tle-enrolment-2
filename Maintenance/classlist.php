@@ -15,7 +15,8 @@ require_once "doorway.php" ;
 ********************************************************/
 
 //Connect to the ClassRegistration database
-	$connection = mysqli_connect("localhost", "root", "", "classregistration");
+	//$connection = mysqli_connect("localhost", "root", "", "classregistration");
+	require_once("../config.php");
 	if (!$connection) {
 		echo "Cannot connect to MySQL. ", mysqli_connect_error($connection);
 		exit();
@@ -51,7 +52,7 @@ require_once "doorway.php" ;
 			        <td><a href="../index.php">Home</a> </td>
                     <td><a href="../about.php">About</a></td>
                     <td><a href="../support.php">Support</a> </td>
-                    <td><a href="AdministratorAuthentication/adminAuthen.php">Maintain</a> </td>
+                    <!-- <td><a href="AdministratorAuthentication/adminAuthen.php">Maintain</a> </td> -->
   		    	  </tr>
 				</table>
 

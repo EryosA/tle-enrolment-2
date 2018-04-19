@@ -14,7 +14,8 @@
 *CAUTION, USE AT YOUR OWN RISK, NO WARRANTY OF ANY KIND
 ********************************************************/
 //Connect to the ClassRegistration database
-	$connection = mysqli_connect("localhost", "root", "", "classregistration");
+	//$connection = mysqli_connect("localhost", "root", "", "classregistration");
+	require_once("../config.php");
 	if (!$connection) {
 		echo "Cannot connect to MySQL. ", mysqli_connect_error($connection);
 		exit();

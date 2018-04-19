@@ -14,7 +14,8 @@
 ********************************************************/
 
 //Connect to the ClassRegistration database
-	$connection = mysqli_connect("localhost", "root", "", "classregistration");
+	//$connection = mysqli_connect("localhost", "root", "", "classregistration");
+	require_once("../config.php");
 	if (!$connection) {
 		echo "Cannot connect to MySQL. ", mysqli_connect_error($connection);
 		exit();
@@ -110,7 +111,7 @@
 						<td><?php echo $classrow ['class_title']; ?></td>
 						<td align="center"><?php echo date('m/d/y',strtotime($classrow ['class_start'])); ?></td>
 						<td><?php echo $classrow ['class_descr']; ?> &nbsp </td>
-						<td align="right">$<?php echo number_format($classrow ['class_cost'],0,'.',','); ?>&nbsp</td>
+						<td align="right">&#8369;<?php echo number_format($classrow ['class_cost'],0,'.',','); ?>&nbsp</td>
 						<td><?php echo $classrow ['class_instr']; ?></td>
 				   </tr>
 			</table>

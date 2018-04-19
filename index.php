@@ -23,7 +23,7 @@
         <div id="wrapper">
             <div id="header">
 
-                <img src="images/DepEd-Website-header-110px_1.png" alt="Department of Education" style="height: 75px;">
+                <img src="images/DepEd-Website-header-110px_1.png"  alt="Department of Education" style="height: 75px;">
                 <h1 id="title">TLE Course Selection and Enrolment</h1>
 
             </div> <!-- id="header" -->
@@ -31,10 +31,10 @@
                 <table width="400" border="0" cellspacing="2" cellpadding="2">
                   <tr>
                     <td><a href="index.php">Home</a> </td>
-                    <td><a href="about.php">About</a></td>
-                    <td><a href="support.php">Support</a> </td>
                     <td><a href="Facilitator/facisignin.php">Facilitator</a> </td>
-                    <td><a href="AdministratorAuthentication/adminAuthen.php">Maintain</a> </td>
+                    <td><a href="AdministratorAuthentication/signin.php">Administrator</a> </td>
+                    <td><a href="support.php">Support</a> </td>
+                    <td><a href="about.php">About</a></td>
                   </tr>
                 </table>
 
@@ -47,10 +47,10 @@
                     <tr>
                         <td><a href="Registration/classes.php">Class List</a> </td>
                     </tr>
-                    <tr>
+                    <!-- <tr>
                         <td><a href="Registration/stuentry.php">Student Entry</a>
                         </td>
-                    </tr>
+                    </tr> -->
                 </table>
 
             </div> <!-- id="vnav" -->

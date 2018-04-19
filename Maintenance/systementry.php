@@ -45,8 +45,8 @@ else {
 			        <td><a href="../index.php">Home</a> </td>
                     <td><a href="../about.php">About</a></td>
                     <td><a href="../support.php">Support</a> </td>
-										<td><a href="">Facilitator</a> </td>
-                    <td><a href="../AdministratorAuthentication/adminAuthen.php">Maintain</a> </td>
+					<!-- <td><a href="">Facilitator</a> </td>
+                    <td><a href="../AdministratorAuthentication/adminAuthen.php">Maintain</a> </td> -->
   		    	  </tr>
 				</table>
 
