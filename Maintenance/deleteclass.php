@@ -16,7 +16,7 @@
 	$classid = ($_GET['recordID']);
 
 //Connect to the ClassRegistration database
-	$connection = mysqli_connect("localhost", "root", "password", "classregistration");
+	$connection = mysqli_connect("localhost", "root", "", "classregistration");
 	if (!$connection) {
 		echo "Cannot connect to MySQL. " . mysqli_connect_error($connection);
 		exit();
@@ -29,5 +29,5 @@
 		exit();
 	}
 //Return to classlist.php.
-	header( "Location: classlist.php");
+	header( "Location: ../classlist.php");
 ?>

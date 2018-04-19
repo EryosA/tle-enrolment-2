@@ -1,0 +1,122 @@
+/* registration.css */
+
+ body	 	{
+			  width : 1000px;
+			  margin : 0;
+			  padding : 0;
+			}
+
+div, h1, h2, p	{
+			  margin : 0;
+			  padding : 0;
+			}
+
+h2			{
+			 color : #8b0000;
+			 font : 600 24px "Palatino Linotype" ;
+			 }
+
+P, textarea	{ font : 14px "Trebuchet", "Helvetica", sans-serif ; }
+
+p#mainpara	{
+			 font : 700 16px "Trebuchet", "Helvetica", sans-serif ;
+			 margin-bottom : 5px
+			}
+
+.red		{ color : red; }
+
+a:link		{
+			 color : #00008b;
+			 font : 600 14px "Trebuchet", "Helvetica", sans-serif;
+			 text-decoration : none;
+			}
+
+a:visited	{
+			 color : #00ffff;
+			 font : 600 14px "Trebuchet", "Helvetica", sans-serif;
+			 text-decoration : none;
+			}
+
+a:focus		{
+			 color : #daa520;
+			 font : 600 14px "Trebuchet", "Helvetica", sans-serif;
+			 text-decoration : underline;
+			}
+
+a:hover		{
+			 color : #daa520;
+			 font : 600 14px "Trebuchet", "Helvetica", sans-serif;
+			 text-decoration : underline;
+			}
+
+th			{
+			margin : 5px;
+			padding : 5px;
+			text-align : right;
+			color : #ffffff;
+			font : 600 14px "Trebuchet", "Helvetica", sans-serif;
+			background : #00008b;
+			}
+
+th.list		{text-align : center}
+
+div#header	{
+			top : 0px;
+			left : 0px;
+			height : 100px;
+			margin : 5px;
+			padding : 5px;
+			}
+
+h1#title 	{
+			color : #8b0000;
+			font : small-caps 600 36px /1.0em "Palatino Linotype" ;
+			text-align : center;
+			vertical-align : top;
+			padding-bottom : 10px;
+			}
+
+div#hnav 	{
+			margin : 5px;
+			margin-left : 15px;
+			padding : 5px;
+			padding-top : 10px;
+			border-bottom : 4px solid #8b0000;
+			}
+
+div#vnav 	{
+			float : left;
+			width : 100px;
+			margin : 5px;
+			padding : 5px;
+			}
+
+#vhead	{
+			color : #8b0000;
+ 			font : 700 14px "Palatino Linotype" ;
+			margin : 5px;
+			padding : 5px;
+			}
+
+div#main 	{
+			float : right;
+			width : 850px;
+			margin : 5px;
+			padding : 5px;
+			border-left : 4px solid #8b0000;
+			}
+
+h1#maintitle {
+			color : #8b0000;
+			font : 600 30px /1.5em "Palatino Linotype" ;
+			text-align : left;
+			vertical-align : top;
+			}
+
+div#footer	{
+			clear: both ;
+			margin : 5px;
+			margin-left : 15px;
+			padding : 5px;
+			border-top : 4px solid #8b0000;
+			}

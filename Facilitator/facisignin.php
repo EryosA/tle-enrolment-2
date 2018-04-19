@@ -17,7 +17,7 @@
 <html>
    <head>
    		<meta charset="utf-8">
-		<title>Administrator Sign In Page</title>
+		<title>Facilitator Sign In Page</title>
 		<link rel= "stylesheet" type= "text/css" href= "../css/registration.css"/>
 		<script language="JavaScript" type= "text/javascript"></script>
 	</head>
@@ -37,7 +37,7 @@
 			        <td><a href="../index.php">Home</a> </td>
                     <td><a href="../about.php">About</a></td>
                     <td><a href="../support.php">Support</a> </td>
-										<td><a href="../Facilitator/facisignin.php">Facilitator</a> </td>
+										<td><a href="facisignin.php">Facilitator</a> </td>
                     <td><a href="../AdministratorAuthentication/adminAuthen.php">Maintain</a> </td>
   		    	  </tr>
 				</table>
@@ -61,7 +61,7 @@
 			<!-- END Pure Template -->
 
 	<div id="main">
-		<h1 id="maintitle">Administrator Sign In</h1>
+		<h1 id="maintitle">Facilitator Sign In</h1>
 		<br />
 <?php
 	$retry = $_SESSION["retry"];
@@ -94,7 +94,7 @@
 			<!-- From User Authentication -->
 			<div id="form">
 			<!-- Display the sign-in form. After filling in, go to verify page. -->
-				<form action="verify.php" method="post" name="form1">
+				<form action="faciverify.php" method="post" name="form1">
 	   				<table width="200" border="0" cellspacing="3" cellpadding="5" >
 					    <tr>
         					<th width="60">User ID:</th>
@@ -110,6 +110,9 @@
     					</tr>
   					</table>
 						<input type="submit" name="submit" value="Sign In" />
+				</form>
+				<form action="faciregister.php" method="post" name="form2">
+					<input type="submit" name="register" value="Register" />
 				</form>
 			</div>  <!-- id="form" -->
 				<!-- End User Authentication -->

@@ -44,21 +44,21 @@
 //Encrypt the password.
 	$encryptpasswd = sha1($userPasswd);
 
-//See if match in the administrator table
-	$query = "SELECT admin_id, admin_password, admin_name
-		   FROM administrator
-		   WHERE admin_id= '$userid' AND admin_password= '$encryptpasswd'";
+//See if match in the facilitator table
+	$query = "SELECT faci_id, faci_password, faci_name
+		   FROM facilitator
+		   WHERE faci_id= '$userid' AND faci_password= '$encryptpasswd'";
 	$result = mysqli_query($connection, $query);
 	if (!$result) {
-		echo "Select from administrator failed. ", mysqli_error($connection);
+		echo "Select from facilitator failed. ", mysqli_error($connection);
 		exit();
 	}
 
 //Determine if the user ID and password are on file.
 	$row = mysqli_fetch_object($result);
-	$db_userid = $row->admin_id;
-	$db_password = $row->admin_password;
-	$db_name = $row->admin_name;
+	$db_userid = $row->faci_id;
+	$db_password = $row->faci_password;
+	$db_name = $row->faci_name;
 
 	if($db_userid != $userid || $db_password != $encryptpasswd){
 
@@ -68,12 +68,12 @@ tryagain:
 		$retry++;
 		if ($retry > 3) {
     //If greater than 3 go to register.
-		   header( "Location: register.php");
+		   header( "Location: faciregister.php");
 		}
 		else {
     //If less than 3 reset Session Retry and go to Sign in
 		   $_SESSION["retry"] = $retry;
-		   header( "Location: signin.php");
+		   header( "Location: facisignin.php");
     	}
 	}
 	else {
@@ -82,6 +82,6 @@ tryagain:
 	$_SESSION["name"] = $db_name;
 	$_SESSION["retry"] = "admit";
 	$_SESSION["time"] = time();
-	header( "Location: /Maintenance/systementry.php");
+	header( "Location: ../Maintenance/systementry.php");
 	}
 ?>

@@ -96,24 +96,24 @@ mail($to_client,$sub_client,$msg_client,$addl_headers_client);
     <head>
    		<meta charset="utf-8">
 		<title>Class Registration Completed</title>
-		<link rel= "stylesheet" type= "text/css" href= "/ClassRegistration/registration.css"/>
+		<link rel= "stylesheet" type= "text/css" href= "../ClassRegistration/registration.css"/>
 		<script language="JavaScript" type= "text/javascript"></script>
 	</head>
 	<!-- Put cursor in the first field -->
 	<body onLoad="document.form1.complete.focus();">
 		<div id="wrapper">
 			<div id="header">
-				<img src="/ClassRegistration/MatTechLogo.gif" alt="Matthews Technology" />
+				<img src="../ClassRegistration/MatTechLogo.gif" alt="Matthews Technology" />
 				<h1 id="title">Class Selection and Registration</h1>
 
 			</div> <!-- id="header" -->
 			<div id="hnav">
 				<table width="400" border="0" cellspacing="2" cellpadding="2">
   				  <tr>
-			        <td><a href="/ClassRegistration/index.php">Home</a> </td>
-			        <td><a href="/ClassRegistration/index.php">About</a> </td>
-			        <td><a href="/ClassRegistration/index.php">Support</a> </td>
-			        <td><a href="/ClassRegistration/AdministratorAuthentication/adminAuthen.php">Maintain</a> </td>
+			        <td><a href="../ClassRegistration/index.php">Home</a> </td>
+			        <td><a href="../ClassRegistration/index.php">About</a> </td>
+			        <td><a href="../ClassRegistration/index.php">Support</a> </td>
+			        <td><a href="../ClassRegistration/AdministratorAuthentication/adminAuthen.php">Maintain</a> </td>
   		    	  </tr>
 				</table>
 

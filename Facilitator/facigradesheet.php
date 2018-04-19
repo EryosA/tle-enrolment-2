@@ -1,5 +1,5 @@
 <?php
-require_once "doorway.php" ;
+require_once "../Maintenance/doorway.php" ;
 
 /*******************************************************
 *
@@ -18,7 +18,7 @@ require_once "doorway.php" ;
 <html>
    <head>
    		<meta charset="utf-8">
-		<title>Class Database Entry</title>
+		<title>Student Grade Table</title>
 		<link rel= "stylesheet" type= "text/css" href= "../css/registration.css"/>
 		<script language="JavaScript" type= "text/javascript"></script>
 	</head>
@@ -36,6 +36,7 @@ require_once "doorway.php" ;
 			        <td><a href="../index.php">Home</a> </td>
                     <td><a href="../about.php">About</a></td>
                     <td><a href="../support.php">Support</a> </td>
+                    <td><a href="facisignin.php">Facilitator</a> </td>
                     <td><a href="../AdministratorAuthentication/adminAuthen.php">Maintain</a> </td>
   		    	  </tr>
 				</table>
@@ -45,106 +46,104 @@ require_once "doorway.php" ;
     				<tr>
 				        <td id="vhead">Go To: </td>
 				    </tr>
-					<tr>
-				        <td><a href="systementry.php">System Entry</a> </td>
-				    </tr>
-				    <tr>
-				        <td><a href="classlist.php">Class Update & Delete</a>
+            <tr>
+				        <td><a href="../Facilitator/facigradesheet.php">Enter Student Grades</a>
 				        </td>
 				    </tr>
 				</table>
 
 			</div> <!-- id="vnav" -->
 			<div id="main">
-				<h1 id="maintitle">Class Database Entry</h1>
+				<h1 id="maintitle">Student Grade Database Entry</h1>
 <?php
 		if($_SESSION["errmsg"] < 1 ){
 ?>
-		<p id="mainpara">Please enter class information and click Add.</p>
+		<p id="mainpara">Please enter student name, grade and click Submit.</p>
 <?php
 	}
 	elseif ($_SESSION["errmsg"] == 1) {
 ?>
-		<p class="red">A Class Title is required.</p>
-		<p class="red">Please RE-enter class information and click Add.</p>
-<?php
-		$_SESSION["errmsg"] = NULL;
-	}
-	elseif ($_SESSION["errmsg"] == 2) {
-?>
-		<p class="red">A Start Date is required.</p>
-		<p class="red">Please RE-enter class information and click Add.</p>
-<?php
-		$_SESSION["errmsg"] = NULL;
-	}
-	elseif ($_SESSION["errmsg"] == 3) {
-?>
-		<p class="red">A Class Descriptioon is required.</p>
-		<p class="red">Please RE-enter class information and click Add.</p>
-<?php
-		$_SESSION["errmsg"] = NULL;
-	}
-	elseif ($_SESSION["errmsg"] == 4) {
-?>
-		<p class="red">A Class Cost is required.</p>
-		<p class="red">Please RE-enter class information and click Add.</p>
-<?php
-		$_SESSION["errmsg"] = NULL;
-	}
-	elseif ($_SESSION["errmsg"] == 5) {
-?>
-		<p class="red">An Instructor is required.</p>
-		<p class="red">Please RE-enter class information and click Add.</p>
-<?php
-		$_SESSION["errmsg"] = NULL;
-	}
-	else  {
-?>
-		<p class="red"> &nbsp </p>
-		<p class="red">Please RE-enter your user ID and password, and click Sign In.</p>
+		<p class="red">A Student Name is required.</p>
+		<p class="red">Please RE-enter Student Name and click Submit.</p>
+
 <?php
 	}
 ?>
 
 				<!-- Class Entry form -->
-				<form action="addclass.php" method="post" name="form1">
+				<form action="faciaddgrades.php" method="post" name="form1">
 					<table width="600px" border="0" cellspacing="1" cellpadding="3">
  					   	<tr>
-						   <th width="18%">Class Title:</th>
+						   <th width="18%">Student Name:</th>
 					       <td width="60%">
-        						<input type="text" name="class_title" value="" size="60" />
+        						<input type="text" name="student_name" value="" size="60" />
 					       </td>
 						</tr>
-					    <tr>
-					        <th>Class Start Date:<span class="red">*</span></th>
-					        <td>
-        						<input type="text" name="class_start" value="" size="60" />
-					        </td>
-					    </tr>
-					    <tr>
-					        <th>Class Description:</th>
-					        <td>
-        						<textarea name="class_descr" cols="60" rows="4"></textarea>
-					        </td>
-					    </tr>
-					    <tr>
-					        <th>Class Cost:</th>
-					        <td>
-        						<input type="text" name="class_cost" value="" size="20" />
-					        </td>
-					    </tr>
-					    <tr>
-						    <th>Class Instructor:</th>
-						    <td>
-        						<input type="text" name="class_instr" value="" size="20" />
-					        </td>
-					    </tr>
+            <tr>
+             <th width="18%">Dressmaking</th>
+               <td width="30%">
+                  <input type="text" name="dressmaking" value="" size="10" />                            
+               </td>
+          </tr>
+          <tr>
+           <th width="18%">Cookery</th>
+             <td width="30%">
+                <input type="text" name="cookery" value="" size="10" />
+
+             </td>
+        </tr>
+        <tr>
+         <th width="18%">Handicraft</th>
+           <td width="30%">
+              <input type="text" name="handycraft" value="" size="10" />
+           </td>
+      </tr>
+      <tr>
+       <th width="18%">Electrical</th>
+         <td width="30%">
+            <input type="text" name="electrical" value="" size="10" />
+         </td>
+    </tr>
+    <tr>
+     <th width="18%">Electronics</th>
+       <td width="30%">
+          <input type="text" name="electronics" value="" size="10" />
+       </td>
+  </tr>
+  <tr>
+   <th width="18%">Drafting</th>
+     <td width="30%">
+        <input type="text" name="drafting" value="" size="10" />
+     </td>
+</tr>
+<tr>
+ <th width="18%">Computer Hardware & Servicing</th>
+   <td width="30%">
+      <input type="text" name="chs" value="" size="10" />
+   </td>
+</tr>
+<tr>
+ <th width="18%">Beauty Care</th>
+   <td width="30%">
+      <input type="text" name="beauty_care" value="" size="10" />
+   </td>
+</tr>
+<tr>
+ <th width="18%">Welding</th>
+   <td width="30%">
+      <input type="text" name="welding" value="" size="10" />
+   </td>
+</tr>
+
+
+
 					</table>
-					<p><input type="submit" value="Add" /></p>
+					<p><input type="submit" value="Submit" /></p>
 				</form>
 
-				<p class="red">All fields required.<br />
-					*Enter date fields as YYYYMMDD.</p>
+				<p class="red">Student Name field is required.<br /></p>
+        <p class="red">Student Name format is First Name Last Name. (ex. Juan Santos)<br /></p>
+
 
 			</div> <!-- id="main" -->
 			<div id="footer">

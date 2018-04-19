@@ -50,7 +50,7 @@
    <head>
    		<meta charset="utf-8">
 		<title>Registration Confirmation</title>
-		<link rel= "stylesheet" type= "text/css" href= "/ClassRegistration/registration.css"/>
+		<link rel= "stylesheet" type= "text/css" href= "../css/registration.css"/>
 		<script language="JavaScript" type= "text/javascript"></script>
 	</head>
 
@@ -59,17 +59,17 @@
 		<!-- From template -->
 		<div id="wrapper">
 			<div id="header">
-				<img src="/ClassRegistration/MatTechLogo.gif" alt="Matthews Technology" />
-				<h1 id="title">Class Selection and Registration</h1>
+				<img src="../images/DepEd-Website-header-110px_1.png" alt="Department of Education" style="height: 75px;">
+                <h1 id="title">TLE Course Selection and Enrolment</h1>
 
 			</div> <!-- id="header" -->
 			<div id="hnav">
 				<table width="400" border="0" cellspacing="2" cellpadding="2">
   				  <tr>
-			        <td><a href="/ClassRegistration/index.php">Home</a> </td>
-			        <td><a href="/ClassRegistration/index.php">About</a> </td>
-			        <td><a href="/ClassRegistration/index.php">Support</a> </td>
-			        <td><a href="/ClassRegistration/AdministratorAuthentication/adminAuthen.php">Maintain</a> </td>
+			        <td><a href="../index.php">Home</a> </td>
+                    <td><a href="../about.php">About</a></td>
+                    <td><a href="../support.php">Support</a> </td>
+                    <td><a href="../AdministratorAuthentication/adminAuthen.php">Maintain</a> </td>
   		    	  </tr>
 				</table>
 
@@ -115,7 +115,7 @@
 						<td><?php echo $classrow ['class_title']; ?></td>
 						<td align="center"><?php echo date('m/d/y',strtotime($classrow ['class_start'])); ?></td>
 						<td><?php echo $classrow ['class_descr']; ?> &nbsp </td>
-						<td align="right">$<?php echo number_format($classrow ['class_cost'],0,'.',','); ?>&nbsp</td>
+						<td align="right">&#8369;<?php echo number_format($classrow ['class_cost'],0,'.',','); ?>&nbsp</td>
 						<td><?php echo $classrow ['class_instr']; ?></td>
 				   </tr>
 			</table>
@@ -153,18 +153,18 @@
 				<p class="red">&nbsp</p>
 			</div> <!-- id="main" -->
 			<div id="footer">
-				<p id="copyright">
-					Copyright &copy:2008 -
-					<?php
-						 date_default_timezone_set('America/Vancouver');
-						 echo date('Y');
-					?>
-					Matthews Technology
-				</p>
-				<p id="contact">
-					 <a href="mailto:info@matthewstechnology.com">Contact us by clicking here.</a>
-				</p>
-			</div> <!-- id="footer" -->
+                <p id="copyright">
+                    Copyright <!-- &copy: 2008 - -->
+                    <?php
+                         date_default_timezone_set('Asia/Singapore');
+                         echo date('Y');
+                    ?>
+                    &#9679 CMSC 208 Group 7
+                </p>
+                <p id="contact">
+                     <a href="mailto:jaaguirre@up.edu.ph">Contact us by clicking here.</a>
+                </p>
+            </div> <!-- id="footer" -->
 		</div> <!-- id="wrapper" -->
 	</body>
 </html>

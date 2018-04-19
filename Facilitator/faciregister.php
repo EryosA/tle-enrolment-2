@@ -6,8 +6,8 @@
 *       from PHP and MySQL, A Beginner's Guide
 *     by Marty Matthews, published 2014 McGraw-Hill
 *
-*     register.php  Entry of a new administrator.
-*     	     Called by adminAuthen.php
+*     register.php  Entry of a new faciistrator.
+*     	     Called by faciAuthen.php
 *          Calls entername.php from form
 *
 ********************************************************
@@ -18,14 +18,14 @@
 <html>
    <head>
    		<meta charset="utf-8">
-		<title>Administrator Registration Page</title>
+		<title>Facilitator Registration Page</title>
 		<link rel= "stylesheet" type= "text/css" href="../css/registration.css"/>
 		<script language="JavaScript" type= "text/javascript"></script>
 
 	</head>
 
 	<!-- Put cursor in the first field -->
-	<body onload="document.form1.admin_name.focus();">
+	<body onload="document.form1.faci_name.focus();">
 		<!-- From template -->
 		<div id="wrapper">
 			<div id="header">
@@ -39,7 +39,8 @@
                     <td><a href="../index.php">Home</a> </td>
                     <td><a href="../about.php">About</a></td>
                     <td><a href="../support.php">Support</a> </td>
-                    <td><a href="../AdministratorAuthentication/adminAuthen.php">Maintain</a> </td>
+										<td><a href="facisignin.php">Facilitator</a> </td>
+                    <td><a href="../faciistratorAuthentication/faciAuthen.php">Maintain</a> </td>
                   </tr>
                 </table>
 
@@ -61,7 +62,7 @@
 			</div> <!-- id="vnav" -->
 			<!-- END Pure Template -->
 			<div id="main">
-				<h1 id="maintitle">Administrator Registration</h1>
+				<h1 id="maintitle">Facilitator Registration</h1>
 				<br />
 <?php
 	if($_SESSION["errmsg"] < 1 ){
@@ -100,24 +101,24 @@
 				<!-- From User Authentication -->
 				<div id="form">
 						<!-- Go to enterName.php after clicking Register -->
-						<form action="enterName.php" method="post" name="form1">
+						<form action="facienterName.php" method="post" name="form2">
 	   					<table width="300" border="0" cellspacing="1" cellpadding="3" >
 					      <tr>
         					<th width="30%">Name:</th>
         					<td width="50%">
-        						<input type="text" name="admin_name" value="" size="60" />
+        						<input type="text" name="faci_name" value="" size="60" />
 		        			</td>
 					      </tr>
 						  <tr>
         					<th>User ID:</th>
         					<td>
-        						<input type="text" name="admin_id" value="" size="20" />
+        						<input type="text" name="faci_id" value="" size="20" />
 		        			</td>
 					      </tr>
 			    		  <tr>
 		        			<th>Password:</th>
 		        			<td>
-   	    						<input type="password" name="admin_password" value="" size="20" />
+   	    						<input type="password" name="faci_password" value="" size="20" />
         					</td>
 		    			  </tr>
   					  </table>

@@ -8,7 +8,7 @@
 *
 * enterName.php Called by register.php Cookie is written.
 *  Then the password is encrypted and that and user id
-*and the name are written to disk. Calls adminAuthen.php.
+*and the name are written to disk. Calls faciAuthen.php.
 *
 ********************************************************
 *CAUTION, USE AT YOUR OWN RISK, NO WARRANTY OF ANY KIND
@@ -22,63 +22,63 @@
 	}
 
 //Remove white space, check for blank, and remove special characters
-	if (($name = trim($_POST['admin_name'])) == '') {
+	if (($name = trim($_POST['faci_name'])) == '') {
 		$_SESSION["errmsg"] = 1;
 		goto tryagain;
 	}
-	else {$name = mysqli_real_escape_string($connection, $_POST['admin_name']);
+	else {$name = mysqli_real_escape_string($connection, $_POST['faci_name']);
 	}
-	if (($userid = trim($_POST['admin_id'])) == '') {
+	if (($userid = trim($_POST['faci_id'])) == '') {
 		$_SESSION["errmsg"] = 2;
 		goto tryagain;
 	}
-	else {$userid = mysqli_real_escape_string($connection, $_POST['admin_id']);
+	else {$userid = mysqli_real_escape_string($connection, $_POST['faci_id']);
 	}
-	if (($userPasswd = trim($_POST['admin_password'])) == '') {
+	if (($userPasswd = trim($_POST['faci_password'])) == '') {
 		$_SESSION["errmsg"] = 3;
 		goto tryagain;
 	}
-	else {$userPasswd = mysqli_real_escape_string($connection, $_POST['admin_password']);
+	else {$userPasswd = mysqli_real_escape_string($connection, $_POST['faci_password']);
 	}
 
 //Set cookie, expires in 180 days.
 	$date = time() ;
 	$expire = time()+(60*60*24*180);
-	setcookie("Admin[name]", $name, $expire, "/");
-	setcookie("Admin[date]", $date, $expire, "/");
+	setcookie("faci[name]", $name, $expire, "/");
+	setcookie("faci[date]", $date, $expire, "/");
 
 //Encrypt the password.
 	$encryptpasswd = sha1($userPasswd);
 
-//See if match in the administrator table
- 	$query = "SELECT admin_id, admin_password, admin_name
-		   FROM administrator
-		   WHERE admin_id= '$userid' AND admin_password= '$encryptpasswd'";
+//See if match in the faciistrator table
+ 	$query = "SELECT faci_id, faci_password, faci_name
+		   FROM facilitator
+		   WHERE faci_id= '$userid' AND faci_password= '$encryptpasswd'";
 	$result = mysqli_query($connection, $query);
 	if (!$result) {
-		echo "Select from administrator failed. ", mysqli_error($connection);
+		echo "Select from facilitator failed. ", mysqli_error($connection);
 		exit();
 	}
 
 //Determine if the user ID and password are on file.
 	$row = mysqli_fetch_object($result);
-	$db_userid = $row->admin_id;
-	$db_password = $row->admin_password;
-	$db_name = $row->admin_name;
+	$db_userid = $row->faci_id;
+	$db_password = $row->faci_password;
+	$db_name = $row->faci_name;
 
 	if($db_userid != $userid || $db_password != $encryptpasswd){
 
-//Add record to the administrator table
- 		$query = "INSERT INTO administrator(admin_id, admin_password, admin_name)
+//Add record to the faciistrator table
+ 		$query = "INSERT INTO facilitator(faci_id, faci_password, faci_name)
 			VALUES('$userid', '$encryptpasswd', '$name')";
 		$result = mysqli_query($connection, $query);
     	if (!$result) {
-	    	echo "Insert to administrator failed. ", mysqli_error($connection);
+	    	echo "Insert to facilitator failed. ", mysqli_error($connection);
 			exit();
     	}
 tryagain:
-    	//Return to adminAuthen.php.
-		header( "Location: adminAuthen.php");
+    	//Return to faciAuthen.php.
+		header( "Location: faciAuthen.php");
 	}
 	else {
 
@@ -89,6 +89,3 @@ tryagain:
 		header( "Location: /Maintenance/systementry.php");
 	}
 ?>
-
-
-

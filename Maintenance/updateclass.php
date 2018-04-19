@@ -68,5 +68,5 @@
 
 tryagain:
 //Return to classlist.php if successful.
-	header( "Location: classlist.php");
+	header( "Location: ../classlist.php");
 ?>
