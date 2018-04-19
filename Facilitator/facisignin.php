@@ -35,10 +35,10 @@
 				<table width="400" border="0" cellspacing="2" cellpadding="2">
   				  <tr>
 			        <td><a href="../index.php">Home</a> </td>
-                    <td><a href="../about.php">About</a></td>
+					<td><a href="facisignin.php">Facilitator</a> </td>
+                    <td><a href="../AdministratorAuthentication/signin.php">Administrator</a> </td>
                     <td><a href="../support.php">Support</a> </td>
-										<td><a href="facisignin.php">Facilitator</a> </td>
-                    <td><a href="../AdministratorAuthentication/adminAuthen.php">Maintain</a> </td>
+                    <td><a href="../about.php">About</a></td>
   		    	  </tr>
 				</table>
 
