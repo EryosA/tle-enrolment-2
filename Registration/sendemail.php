@@ -95,8 +95,8 @@ mail($to_client,$sub_client,$msg_client,$addl_headers_client);
     <body onLoad="document.form1.complete.focus();">
         <div id="wrapper">
             <div id="header">
-                <img src="/ClassRegistration/MatTechLogo.gif" alt="Matthews Technology" />
-                <h1 id="title">Class Selection and Registration</h1>
+                <img src="../images/DepEd-Website-header-110px_1.png" alt="Department of Education" style="height: 75px;">
+                <h1 id="title">TLE Course Selection and Enrolment</h1>
 
             </div> <!-- id="header" -->
             <div id="hnav">
