@@ -107,18 +107,18 @@
 				<p class="red">&nbsp</p>
 			</div> <!-- id="main" -->
 			<div id="footer">
-				<p id="copyright">
-					Copyright &copy:2008 -
-					<?php
-						 date_default_timezone_set('Asia/Singapore');
-						 echo date('Y');
-					?>
-					Matthews Technology
-				</p>
-				<p id="contact">
-					 <a href="mailto:info@matthewstechnology.com">Contact us by clicking here.</a>
-				</p>
-			</div> <!-- id="footer" -->
+                <p id="copyright">
+                    Copyright <!-- &copy: 2008 - -->
+                    <?php
+                         date_default_timezone_set('Asia/Singapore');
+                         echo date('Y');
+                    ?>
+                    &#9679 CMSC 208 Group 7
+                </p>
+                <p id="contact">
+                     <a href="mailto:jaaguirre@up.edu.ph">Contact us by clicking here.</a>
+                </p>
+            </div> <!-- id="footer" -->
 		</div> <!-- id="wrapper" -->
 	</body>
 </html>
