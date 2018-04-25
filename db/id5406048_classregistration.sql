@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Apr 25, 2018 at 08:46 AM
+-- Generation Time: Apr 25, 2018 at 11:02 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.0.26
 
@@ -113,19 +113,19 @@ CREATE TABLE `grades` (
 --
 
 INSERT INTO `grades` (`id`, `student_name`, `shielded_metal_works`, `computer_system_servicing`, `bread_pastry`, `electronics`) VALUES
-(10, 'Jaena Kate Raina', 8, 12, 21, 2),
-(11, 'VeyAnne Monteverde', 6, 8, 25, 24),
-(12, 'VeyAnne Monteverde', 6, 8, 25, 24),
-(13, 'Angelica Devera', 11, 15, 23, 23),
-(14, 'Justine Fer Amurao', 15, 19, 22, 23),
-(15, 'John Jhonel Nerval', 15, 23, 25, 25),
-(16, 'Daniell Karl Ustare', 19, 24, 25, 22),
-(17, 'Lander Rey', 10, 6, 5, 15),
-(18, 'Raiza Coleen Querrel', 15, 17, 22, 21),
-(19, 'Van Bryan Ceniza', 16, 18, 5, 14),
-(20, 'John Lloyd Ceniza', 15, 19, 10, 20),
-(21, 'Kayla Aquino', 9, 13, 12, 17),
-(22, 'Carlos Eduardo Aman', 11, 13, 17, 25);
+(1, 'Jaena Kate Raina', 8, 12, 21, 2),
+(2, 'VeyAnne Monteverde', 6, 8, 25, 24),
+(3, 'VeyAnne Monteverde', 6, 8, 25, 24),
+(4, 'Angelica Devera', 11, 15, 23, 23),
+(5, 'Justine Fer Amurao', 15, 19, 22, 23),
+(6, 'John Jhonel Nerval', 15, 23, 25, 25),
+(7, 'Daniell Karl Ustare', 19, 24, 25, 22),
+(8, 'Lander Rey', 10, 6, 5, 15),
+(9, 'Raiza Coleen Querrel', 15, 17, 22, 21),
+(10, 'Van Bryan Ceniza', 16, 18, 5, 14),
+(11, 'John Lloyd Ceniza', 15, 19, 10, 20),
+(12, 'Kayla Aquino', 9, 13, 12, 17),
+(13, 'Carlos Eduardo Aman', 11, 13, 17, 25);
 
 -- --------------------------------------------------------
 
@@ -247,7 +247,7 @@ ALTER TABLE `facilitator`
 -- AUTO_INCREMENT for table `grades`
 --
 ALTER TABLE `grades`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `registration`

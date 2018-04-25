@@ -5,7 +5,7 @@
 define("PHPGRID_DBTYPE","mysqli"); // mysql,oci8(for oracle),mssql,postgres,sybase
 define("PHPGRID_DBHOST","localhost");
 define("PHPGRID_DBUSER","root");
-define("PHPGRID_DBPASS","");
+define("PHPGRID_DBPASS","root");
 define("PHPGRID_DBNAME","classregistration");
 
 // Basepath for lib
