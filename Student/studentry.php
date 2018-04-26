@@ -56,7 +56,7 @@ else {
 				        <td id="vhead">Go To: </td>
 				    </tr>
 				    	 <tr>
-                        	<td><a href="Registration/classes.php">Class List</a> </td>
+                        	<td><a href="../Registration/classes.php">Class List</a> </td>
                     	</tr>
 
 				</table>
