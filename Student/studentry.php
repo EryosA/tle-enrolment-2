@@ -55,21 +55,10 @@ else {
     				<tr>
 				        <td id="vhead">Go To: </td>
 				    </tr>
-<!-- 					<tr> -->
-<!-- 				        <td><a href="classentry.php">Enter New Classes</a> </td> -->
-<!-- 				    </tr> -->
-<!-- 				    <tr> -->
-<!-- 				        <td><a href="classlist.php">Update & Delete Classes</a> -->
-<!-- 				        </td> -->
-<!-- 				    </tr> -->
-<!-- 						<tr> -->
-<!-- 				        <td><a href="../Facilitator/facigradesheet.php">Enter Student Grades</a> -->
-<!-- 				        </td> -->
-<!-- 				    </tr> -->
-<!--                     <tr> -->
-<!-- 				        <td><a href="/vendor/phpgrid/assessment_grades.php">Grades Table</a> -->
-<!-- 				        </td> -->
-<!-- 				    </tr> -->
+				    	 <tr>
+                        	<td><a href="Registration/classes.php">Class List</a> </td>
+                    	</tr>
+
 				</table>
 
 			</div> <!-- id="vnav" -->
