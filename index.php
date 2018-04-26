@@ -31,6 +31,7 @@
                 <table width="400" border="0" cellspacing="2" cellpadding="2">
                   <tr>
                     <td><a href="index.php">Home</a> </td>
+                    <td><a href="Student/studsignin.php">Student</a> </td>
                     <td><a href="Facilitator/facisignin.php">Facilitator</a> </td>
                     <td><a href="AdministratorAuthentication/signin.php">Administrator</a> </td>
                     <td><a href="support.php">Support</a> </td>

@@ -57,7 +57,7 @@
 
 //Determine if the user ID and password are on file.
 	$row = mysqli_fetch_object($result);
-	$db_userid = $row->faci_id;
+	$db_userid = $row->student_id;
 	$db_password = $row->faci_password;
 	$db_name = $row->faci_name;
 
