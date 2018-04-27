@@ -74,7 +74,7 @@
 			</div> <!-- id="vnav" -->
 			<div id="main">
 				<h1 id="maintitle">Class List</h1>
-				<p id="mainpara">Choose a class and click Register.</p>
+				<p id="mainpara">Choose a class and click Enroll.</p>
 
 				<!-- Class List -->
 				<table width="850" border="1" frame="void" rules="all" cellspacing="1" cellpadding="2">
@@ -99,7 +99,7 @@
 						<td><?php echo $classrow ['class_descr']; ?> &nbsp </td>
 						<td align="right">&#8369;<?php echo number_format($classrow ['class_cost'],0,'.',','); ?>&nbsp</td>
 						<td><?php echo $classrow ['class_instr']; ?></td>
-						<td><a href="emailentry.php?recordID=<?php echo $classrow ['class_id']; ?>">Register</a></td>
+						<td><a href="emailentry.php?recordID=<?php echo $classrow ['class_id']; ?>">Enroll</a></td>
 				   </tr>
 			   	   <?php } while ( $classrow = mysqli_fetch_assoc($result) ); ?>
 			</table>
