@@ -45,7 +45,7 @@ else {
 			        <td><a href="../index.php">Home</a> </td>
                     <td><a href="../about.php">About</a></td>
                     <td><a href="../support.php">Support</a> </td>
-					
+
   		    	  </tr>
 				</table>
 
@@ -56,7 +56,7 @@ else {
 				        <td id="vhead">Go To: </td>
 				    </tr>
 				    	 <tr>
-                        	<td><a href="../Registration/classes.php">Class List</a> </td>
+                        	<td><a href="../Registration/classes.php">Enroll</a> </td>
                     	</tr>
 
 				</table>

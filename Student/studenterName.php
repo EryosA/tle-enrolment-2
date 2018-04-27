@@ -45,19 +45,19 @@
 //Set cookie, expires in 180 days.
 	$date = time() ;
 	$expire = time()+(60*60*24*180);
-	setcookie("faci[name]", $name, $expire, "/");
-	setcookie("faci[date]", $date, $expire, "/");
+	setcookie("student[name]", $name, $expire, "/");
+	setcookie("student[date]", $date, $expire, "/");
 
 //Encrypt the password.
 	$encryptpasswd = sha1($userPasswd);
 
-//See if match in the faciistrator table
+//See if match in the student table
  	$query = "SELECT student_id, password, student_name
 		   FROM student
 		   WHERE student_id= '$userid' AND password= '$encryptpasswd'";
 	$result = mysqli_query($connection, $query);
 	if (!$result) {
-		echo "Select from facilitator failed. ", mysqli_error($connection);
+		echo "Select from student failed. ", mysqli_error($connection);
 		exit();
 	}
 
@@ -74,11 +74,11 @@
 			VALUES('$userid', '$encryptpasswd', '$name')";
 		$result = mysqli_query($connection, $query);
     	if (!$result) {
-	    	echo "Insert to facilitator failed. ", mysqli_error($connection);
+	    	echo "Insert to student failed. ", mysqli_error($connection);
 			exit();
     	}
 tryagain:
-    	//Return to faciAuthen.php.
+    	//Return to studAuthen.php.
 		header( "Location: studAuthen.php");
 	}
 	else {
@@ -87,6 +87,6 @@ tryagain:
 		$_SESSION["name"] = $db_name;
 		$_SESSION["retry"] = "admit";
 		$_SESSION["time"] = time();
-		header( "Location: /Maintenance/systementry.php");
+		header( "Location: /Student/studentry.php");
 	}
 ?>
