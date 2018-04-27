@@ -58,6 +58,9 @@ else {
 				    	 <tr>
                         	<td><a href="../Registration/classes.php">Enroll</a> </td>
                     	</tr>
+                    	<tr>
+                        	<td><a href="../Student/studprofile.php">Profile</a> </td>
+                    	</tr>
 
 				</table>
 

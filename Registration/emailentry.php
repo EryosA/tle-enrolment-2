@@ -35,6 +35,35 @@
 //Get class (row)from database
 	$classrow = mysqli_fetch_assoc($result);
 ?>
+
+<?php 
+//See if match in the registration table
+    $query2 = "SELECT class_id, student_email
+    		   FROM registration
+    		   WHERE class_id= '$classid' AND student_email= '$studentemail'";
+    $result2 = mysqli_query($connection, $query2);
+    if (!$result2) {
+        echo "Select from registration failed. ", mysqli_error($connection);
+        exit();
+        
+//         //Determine if the user ID and password are on file.
+//         $row = mysqli_fetch_object($result2);
+//         $db_classid = $row->class_id;
+//         $db_studentemail = $row->student_email;
+        
+//         echo $db_classid;
+//         echo $db_studentemail;
+    }
+    
+//     $query = "SELECT * from users where pin ='$pin'";
+//     $result = mysql_query($query);
+    
+    // check if record already exists
+    if(mysql_num_rows($result2) > 0)
+    {
+        echo " exists";
+    }
+?>?>
 <!DOCTYPE html>
 <html>
    <head>
@@ -133,6 +162,8 @@
 						<input type="submit" name="submit" value="Continue" />
 				</form>
 			</div>  <!-- id="form" -->
+			
+			
 
 				<!-- Begin from template -->
 				<br />
