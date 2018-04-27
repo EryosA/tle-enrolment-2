@@ -11,7 +11,7 @@
 
 	//Get email address from studsignin.php
     // 	$studentid = ($_GET['student_id']);
-    
+
 	//Get user id when student logs in
     $studentid = ($_SERVER['USER']);
 
@@ -73,7 +73,7 @@
 				<h1 id="maintitle">Student Profile</h1>
 				<br />
 
-				
+
 				<table width="850" border="1" frame="void" rules="all" cellspacing="1" cellpadding="2">
 					<!-- Display the column headings -->
 				    <tr>
@@ -94,7 +94,15 @@
 				   </tr>
 				</table>
 				   <!-- End student info. -->
-	
+
+<!-- 				Logout user -->
+				 <div>
+				<br>
+				<br>
+				 <a href="studlogout.php">Logout</a>
+				 </div>
+
+
 
 				<!-- Begin from template -->
 				<br />
