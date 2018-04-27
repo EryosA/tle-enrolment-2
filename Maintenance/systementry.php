@@ -67,10 +67,14 @@ else {
 				        <td><a href="../Facilitator/facigradesheet.php">Enter Student Grades</a>
 				        </td>
 				    </tr>
-                    <tr>
+                <tr>
 				        <td><a href="/vendor/phpgrid/assessment_grades.php">Grades Table</a>
 				        </td>
 				    </tr>
+						<tr>
+						<td><a href="/vendor/phpgrid/registration_table.php">Enrollment Records</a>
+						</td>
+				</tr>
 				</table>
 
 			</div> <!-- id="vnav" -->
