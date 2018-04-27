@@ -51,7 +51,7 @@
 		   WHERE student_id= '$userid' AND password= '$encryptpasswd'";
 	$result = mysqli_query($connection, $query);
 	if (!$result) {
-		echo "Select from facilitator failed. ", mysqli_error($connection);
+		echo "Select from student failed. ", mysqli_error($connection);
 		exit();
 	}
 

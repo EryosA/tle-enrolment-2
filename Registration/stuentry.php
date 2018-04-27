@@ -69,7 +69,7 @@
 				        <td id="vhead">Go To:</td>
 				    </tr>
 					<tr>
-				        <td><a href="classes.php">Class List</a> </td>
+				        <td><a href="classes.php">Enroll</a> </td>
 				    </tr>
 				    <tr>
 				        <td><a href="emailentry.php?recordID=<?php echo $classid; ?>">Email Entry</a> </td>
