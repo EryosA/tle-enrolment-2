@@ -102,9 +102,9 @@ mail($to_client,$sub_client,$msg_client,$addl_headers_client);
             <div id="hnav">
                 <table width="400" border="0" cellspacing="2" cellpadding="2">
                   <tr>
-                    <td><a href="/ClassRegistration/index.php">Home</a> </td>
-                    <td><a href="/ClassRegistration/index.php">About</a> </td>
-                    <td><a href="/ClassRegistration/index.php">Support</a> </td>
+                    <td><a href="../index.php">Home</a> </td>
+                    <td><a href="../about.php">About</a></td>
+                    <td><a href="../support.php">Support</a> </td>
                     <!-- <td><a href="/ClassRegistration/AdministratorAuthentication/adminAuthen.php">Maintain</a> </td> -->
                   </tr>
                 </table>
@@ -127,7 +127,7 @@ mail($to_client,$sub_client,$msg_client,$addl_headers_client);
             </div> <!-- id="vnav" -->
             <div id="main">
                 <h1 id="maintitle">Class Database Update</h1>
-                <p id="mainpara">Thank you for completing class regristration!<br />
+                <p id="mainpara">Thank you for completing class registration!<br />
                      Please click Complete.</p>
 
                 <div id="form">
