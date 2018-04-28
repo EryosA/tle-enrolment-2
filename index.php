@@ -52,9 +52,29 @@
 
             </div> <!-- id="vnav" -->
             <div id="main">
-                <h1 id="maintitle">Class Schedule</h1>
-                <p id="mainpara">Click Class List to Register for a class.</p>
-                <p class="red">*A footnote.</p>
+                <h1 id="maintitle">Abstract</h1>
+                
+                <p id="mainpara">The project was developed for Dr. Maria D. Pastrana National High School to address the
+problem of course selection with the incoming Grade 9 students. The aim of the application is to
+effectively manage and control the Grade 9 enrolees including an online monitoring in the number of
+students enrolled per course. By real time monitoring of the number of students per course, the issue
+on unbalanced enrolees per course can be solved.</p><br>
+
+<p id="mainpara">With the Online Enrolment System, the Admin User can disable the courses that meet the
+specified number of enrolees. Aside from this function, the application has a record of the student's
+summative exam results. This can be a reference point to recommend the course per student based
+on the highest score among the four offered courses in Grade 9.</p><br>
+
+<p id="mainpara">One of the benefits of the application is the function to shift the manual enrolment process to
+an online enrolment system including a database that will contain the enrolment records. This
+approach will eliminate manual allocation of faculty members during the enrolment season, Through
+the project, it can then be expanded by the school administration to cover all grade levels across the
+school. Not only it is supporting the modern technology of an online system, it will also migrate the
+student's records from local to an online directory that can be made available to the parents, faculty
+and school management.</p><br>
+
+<p id="mainpara">This application can be a start of a new enrolment system in Dr. Maria D. Pastrana High
+School.</p><br>
 
             </div> <!-- id="main" -->
             <div id="footer">

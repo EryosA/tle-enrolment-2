@@ -10,10 +10,10 @@
 	}
 
 	//Get email address from studverify.php
-    $studentid = ($_GET['userid']);
+    //$studentid = ($_GET['userid']);
     
 	//Get user id when student logs in
-    //$studentid = ($_SERVER['USER']);
+    $studentid = ($_SERVER['USER']);
 	
     
 

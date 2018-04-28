@@ -87,7 +87,7 @@ tryagain:
 		$_SESSION["name"] = $db_name;
 		$_SESSION["retry"] = "admit";
 		$_SESSION["time"] = time();
-		header( "Location: /Student/studentry.php");
+		header( "Location: studentry.php");
 	}
 ?>
 
