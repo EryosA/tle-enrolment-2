@@ -1,17 +1,17 @@
 <?php
-	session_start();
+session_start();
 /*******************************************************
-*
-*     CLASS SELECTION AND REGISTRATION SYSTEM
-*       from PHP and MySQL, A Beginner's Guide
-*     by Marty Matthews, published 2014 McGraw-Hill
-*
-*     singin.php  Administrator sign in. Called by
-*         adminAuthen.php and calls verify.php
-*
-********************************************************
-*CAUTION, USE AT YOUR OWN RISK, NO WARRANTY OF ANY KIND
-********************************************************/
+ *
+ *     CLASS SELECTION AND REGISTRATION SYSTEM
+ *       from PHP and MySQL, A Beginner's Guide
+ *     by Marty Matthews, published 2014 McGraw-Hill
+ *
+ *     singin.php  Administrator sign in. Called by
+ *         adminAuthen.php and calls verify.php
+ *
+ ********************************************************
+ *CAUTION, USE AT YOUR OWN RISK, NO WARRANTY OF ANY KIND
+ ********************************************************/
 ?>
 <!DOCTYPE html>
 <html>

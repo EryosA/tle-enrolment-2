@@ -46,19 +46,19 @@
 	$encryptpasswd = sha1($userPasswd);
 
 //See if match in the student table
-	$query = "SELECT student_id, password, student_name
+	$query = "SELECT student_id, student_password, student_name
 		   FROM student
-		   WHERE student_id= '$userid' AND password= '$encryptpasswd'";
+		   WHERE student_id= '$userid' AND student_password= '$encryptpasswd'";
 	$result = mysqli_query($connection, $query);
 	if (!$result) {
-		echo "Select from facilitator failed. ", mysqli_error($connection);
+		echo "Select from student failed. ", mysqli_error($connection);
 		exit();
 	}
 
 //Determine if the user ID and password are on file.
 	$row = mysqli_fetch_object($result);
 	$db_userid = $row->student_id;
-	$db_password = $row->password;
+	$db_password = $row->student_password;
 	$db_name = $row->student_name;
 
 	if($db_userid != $userid || $db_password != $encryptpasswd){
@@ -83,6 +83,6 @@ tryagain:
 	$_SESSION["name"] = $db_name;
 	$_SESSION["retry"] = "admit";
 	$_SESSION["time"] = time();
-	header( "Location: studentry.php");
+	header( "Location: /Student/studentry.php");
 	}
 ?>

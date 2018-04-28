@@ -35,26 +35,26 @@
 	}
 	else {$userid = mysqli_real_escape_string($connection, $_POST['student_id']);
 	}
-	if (($userPasswd = trim($_POST['student_password'])) == '') {
+	if (($userPasswd = trim($_POST['password'])) == '') {
 		$_SESSION["errmsg"] = 3;
 		goto tryagain;
 	}
-	else {$userPasswd = mysqli_real_escape_string($connection, $_POST['student_password']);
+	else {$userPasswd = mysqli_real_escape_string($connection, $_POST['password']);
 	}
 
 //Set cookie, expires in 180 days.
 	$date = time() ;
 	$expire = time()+(60*60*24*180);
-	setcookie("Student[name]", $name, $expire, "/");
-	setcookie("Student[date]", $date, $expire, "/");
+	setcookie("student[name]", $name, $expire, "/");
+	setcookie("student[date]", $date, $expire, "/");
 
 //Encrypt the password.
 	$encryptpasswd = sha1($userPasswd);
 
-//See if match in the student table
- 	$query = "SELECT student_id, student_password, student_name
+//See if match in the faciistrator table
+ 	$query = "SELECT student_id, password, student_name
 		   FROM student
-		   WHERE student_id= '$userid' AND student_password= '$encryptpasswd'";
+		   WHERE student_id= '$userid' AND password= '$encryptpasswd'";
 	$result = mysqli_query($connection, $query);
 	if (!$result) {
 		echo "Select from student failed. ", mysqli_error($connection);
@@ -64,13 +64,13 @@
 //Determine if the user ID and password are on file.
 	$row = mysqli_fetch_object($result);
 	$db_userid = $row->student_id;
-	$db_password = $row->student_password;
+	$db_password = $row->password;
 	$db_name = $row->student_name;
 
 	if($db_userid != $userid || $db_password != $encryptpasswd){
 
 //Add record to the student table
- 		$query = "INSERT INTO student(student_id, student_password, student_name)
+ 		$query = "INSERT INTO student(student_id, password, student_name)
 			VALUES('$userid', '$encryptpasswd', '$name')";
 		$result = mysqli_query($connection, $query);
     	if (!$result) {
@@ -90,6 +90,3 @@ tryagain:
 		header( "Location: /Student/studentry.php");
 	}
 ?>
-
-
-

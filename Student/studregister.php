@@ -39,8 +39,6 @@
                     <td><a href="../index.php">Home</a> </td>
                     <td><a href="../about.php">About</a></td>
                     <td><a href="../support.php">Support</a> </td>
-<!-- 										<td><a href="facisignin.php">Facilitator</a> </td> -->
-<!--                     <td><a href="../faciistratorAuthentication/faciAuthen.php">Maintain</a> </td> -->
                   </tr>
                 </table>
 
@@ -100,7 +98,7 @@
 ?>
 				<!-- From User Authentication -->
 				<div id="form">
-						<!-- Go to enterName.php after clicking Register -->
+						<!-- Go to studenterName.php after clicking Register -->
 						<form action="studenterName.php" method="post" name="form2">
 	   					<table width="300" border="0" cellspacing="1" cellpadding="3" >
 					      <tr>
@@ -112,7 +110,7 @@
 						  <tr>
         					<th>User ID:</th>
         					<td>
-        						<input type="text" name="student_id" value="" size="20" />
+        						<input type="text" name="student_id" value="" size="40" />
 		        			</td>
 					      </tr>
 			    		  <tr>
