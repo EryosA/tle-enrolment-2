@@ -10,7 +10,7 @@
 	}
 
 	//Get email address from studverify.php
-    $studentid = ($_GET['student_id']);
+    $studentid = ($_GET['userid']);
     
 	//Get user id when student logs in
     //$studentid = ($_SERVER['USER']);
@@ -24,8 +24,10 @@
 		echo "Select from registration failed. ", mysqli_error($connection);
 		exit();
 	}
-//Get student (row) from student table
-	$studentrow = mysqli_fetch_assoc($result);
+//Get studentinfo from student table
+	//$studentrow = mysqli_fetch_assoc($result);
+	
+	$studinfo = mysqli_fetch_array($result);
 
 ?>
 <!DOCTYPE html>
@@ -88,11 +90,11 @@
 
 				   <!-- Display student info. -->
 				   <tr>
-						<td><?php echo $studentrow ['student_id']; ?></td>
-						<td><?php echo $studentrow ['student_name']; ?></td>
-						<td><?php echo $studentrow ['student_email']; ?></td>
-						<td><?php echo $studentrow ['student_phone']; ?></td>
-						<td><?php echo $studentrow ['student_date']; ?> &nbsp</td>
+						<td><?php echo $studinfo ['student_id']; ?></td>
+						<td><?php echo $studinfo ['student_name']; ?></td>
+						<td><?php echo $studinfo ['student_email']; ?></td>
+						<td><?php echo $studinfo ['student_phone']; ?></td>
+						<td><?php echo $studinfo ['student_date']; ?> &nbsp</td>
 				   </tr>
 				</table>
 				   <!-- End student info. -->
